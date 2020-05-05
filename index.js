@@ -4,12 +4,12 @@ const app = express();
 var bodyParser = require("body-parser");
 
 var omise = require("omise")({
-  secretKey: "skey_test_5jidn0btt7cmpuk01ml",
+  secretKey: "OmiseSecretKey",
   omiseVersion: "2015-09-10",
 });
 
 var admin = require("firebase-admin");
-var serviceAccount = require("./firebase/kmitlfitnessapp-firebase-adminsdk-les1k-3fc25aa1d0.json");
+var serviceAccount = require("FirebaseKey");
 var moment = require("moment");
 
 admin.initializeApp({
@@ -28,7 +28,7 @@ app.post("/api/payment/charge", (req, res) => {
   console.log("api-payment-charge-call");
   console.log(req.body);
   var omise = require("omise")({
-    secretKey: "skey_test_5jidn0btt7cmpuk01ml",
+    secretKey: "OmiseSecretKey",
     omiseVersion: "2015-09-10",
   });
   omise.charges
